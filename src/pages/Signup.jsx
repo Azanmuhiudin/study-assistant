@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { BookOpen, User, Mail, Lock, AlertCircle } from 'lucide-react'
-import { useAuth } from '../context/AuthContext.jsx'
+import { useAuth } from '../Context/AuthContext.jsx'
 import './Auth.css'
 
 export default function Signup() {

@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from 'react-router-dom'
 import { BookOpen, MessageCircle, BrainCircuit, FileText, Zap, Layers, BarChart2, LogOut } from 'lucide-react'
-import { useAuth } from '../context/AuthContext.jsx'
+import { useAuth } from '../Context/AuthContext.jsx'
 import './Layout.css'
 
 const navItems = [
