@@ -1,0 +1,194 @@
+/* Stats */
+.pg-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.pg-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+}
+.pg-stat-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.pg-stat-num {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.8px;
+  animation: count-up 0.6s cubic-bezier(0.16,1,0.3,1) both;
+}
+.pg-stat-label {
+  font-size: 12px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* Chart */
+.pg-chart { padding: 24px; }
+.pg-chart-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 20px;
+}
+.pg-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 160px;
+}
+.pg-bar-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  animation: fadeUp 0.5s cubic-bezier(0.16,1,0.3,1) both;
+}
+.pg-bar-label-top {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text2);
+  margin-bottom: 4px;
+}
+.pg-bar-track {
+  flex: 1;
+  width: 100%;
+  background: var(--surface);
+  border-radius: 6px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.pg-bar-fill {
+  width: 100%;
+  border-radius: 6px;
+  transition: height 0.8s cubic-bezier(0.16,1,0.3,1);
+  min-height: 4px;
+}
+.pg-bar-label {
+  font-size: 11px;
+  color: var(--text3);
+  margin-top: 6px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.pg-bar-date {
+  font-size: 10px;
+  color: var(--text3);
+  margin-top: 2px;
+}
+
+/* Actions */
+.pg-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* Form */
+.pg-form { margin-bottom: 20px; }
+.pg-form-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.pg-form-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+.setup-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text3);
+  margin-bottom: 6px;
+}
+
+/* Empty */
+.pg-empty {
+  text-align: center;
+  padding: 48px;
+  margin-top: 8px;
+}
+.pg-empty-icon { font-size: 48px; margin-bottom: 14px; animation: float 4s ease-in-out infinite; display: block; }
+.pg-empty-text { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.pg-empty-sub { font-size: 14px; color: var(--text3); font-weight: 300; }
+
+/* History */
+.pg-history { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.pg-entry {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  animation: fadeUp 0.4s cubic-bezier(0.16,1,0.3,1) both;
+}
+.pg-entry-left { min-width: 140px; }
+.pg-entry-topic { font-size: 14px; font-weight: 500; color: var(--text); }
+.pg-entry-date { font-size: 12px; color: var(--text3); margin-top: 2px; }
+.pg-entry-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.pg-entry-bar-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pg-entry-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--surface);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.pg-entry-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+.pg-entry-pct { font-size: 13px; font-weight: 700; min-width: 36px; }
+.pg-entry-score { font-size: 13px; color: var(--text3); min-width: 36px; text-align: right; }
+.pg-delete {
+  width: 26px; height: 26px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text3);
+  cursor: pointer;
+  font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+.pg-delete:hover { background: rgba(247,106,106,0.1); color: var(--danger); border-color: var(--danger); }
+
+@media (max-width: 768px) {
+  .pg-stats { grid-template-columns: 1fr 1fr; }
+  .pg-form-row { flex-direction: column; }
+}
